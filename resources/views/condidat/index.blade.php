@@ -77,6 +77,7 @@
                                             <tr>
                                                 <th class="wd-lg-10p"><span><h5>المرشح</h5></span></th>
                                                 <th class="wd-lg-20p"><span><h5> </h5></span></th>
+                                                <th class="wd-lg-20p"><span><h5> الدبلوم و بطاقة التعريف </h5></span></th>
                                                 <th class="wd-lg-20p"><span><h5>البريد</h5></span></th>
                                                 <th class="wd-lg-20p text-center"><span><h5>الهاتف</h5></span></th>
                                                 <th class="wd-lg-20p"><span><h5>تاريخ الميلاد</h5></span></th>
@@ -92,6 +93,10 @@
                                                 </td>
                                                 <td>
                                                     {{ $condidat->name }} {{ $condidat->lastname }}
+                                                </td>
+                                                <td>
+                                                    <img style="height: 5rem;margin: 1rem;" src=" {{ url('/images',$condidat->diplom) }}" alt="" srcset="">
+                                                    <img style="height: 5rem;margin: 1rem;" src=" {{ url('/images',$condidat->photoID) }}" alt="" srcset="">
                                                 </td>
                                                 <td>
                                                     <a href="mailto:{{ $condidat->email }}">{{ $condidat->email }}</a>
