@@ -25,6 +25,7 @@ class Condidat extends Model
         'grade',
         'spiciality',
         'diplom',
+        'sex',
     ];
 
     public function toSearchableArray(){

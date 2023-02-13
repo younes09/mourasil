@@ -47,6 +47,7 @@ class CondidatController extends Controller
             'email' => 'required|email|unique:condidats|max:255',
             'photo' => 'required|image|mimes:png,jpg,jpeg|max:2048',
             'name' => 'required',
+            'sex' => 'required',
             'lastname' => 'required',
             'phone' => 'required|unique:condidats',
             'birth_day' => 'required',
@@ -76,7 +77,8 @@ class CondidatController extends Controller
             'grade.required' => 'حقل مطلوب.',
             'spiciality.required' => 'حقل مطلوب.',
             'diplom.required' => 'حقل مطلوب.',
-            'diplom.image' => 'هاذا الحقل مخصص للصور فقط !'
+            'diplom.image' => 'هاذا الحقل مخصص للصور فقط !',
+            'sex.required' => 'حقل مطلوب.',
         ]);
 
         // Get all inputs

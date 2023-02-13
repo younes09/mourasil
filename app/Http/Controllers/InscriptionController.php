@@ -49,7 +49,8 @@ class InscriptionController extends Controller
             'photoID' => 'required|image|mimes:png,jpg,jpeg|max:2048',
             'grade' => 'required',
             'spiciality' => 'required',
-            'diplom' => 'required|image|mimes:png,jpg,jpeg|max:2048'
+            'diplom' => 'required|image|mimes:png,jpg,jpeg|max:2048',
+            'sex' => 'required',
         ],
         [
             'email.required' => 'حقل البريد الإلكتروني مطلوب.',
@@ -69,7 +70,8 @@ class InscriptionController extends Controller
             'grade.required' => 'حقل مطلوب.',
             'spiciality.required' => 'حقل مطلوب.',
             'diplom.required' => 'حقل مطلوب.',
-            'diplom.image' => 'هاذا الحقل مخصص للصور فقط !'
+            'diplom.image' => 'هاذا الحقل مخصص للصور فقط !',
+            'sex.required' => 'حقل مطلوب.',
         ]);
 
         // Get all inputs

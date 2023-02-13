@@ -85,6 +85,18 @@
 											<input name="lastname" type="text" class="form-control mb-1" placeholder="اللقب" value="{{ $condidat->lastname }}" required/>
 										</div>
 									</div>
+									<div class="row">
+										<div class="col-sm-12 col-md-6">
+											<div class="form-group">
+											  <label for="sex"><h4>الجنس</h4></label>
+											  <select class="form-control" aria-label="Default select example" name="sex" id="sex">
+												<option value="h" @if ($condidat->sex == 'h') selected @endif>ذكر</option>
+												<option value="f" @if ($condidat->sex == 'f') selected @endif>أنثى</option>
+											  </select>
+											</div>
+											{{-- <input name="lastname" type="text" class="form-control mb-1" placeholder="اللقب" value="{{ old('lastname') }}" required/> --}}
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="card">

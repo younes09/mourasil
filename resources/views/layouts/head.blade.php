@@ -1,7 +1,7 @@
 <!-- Title -->
 <title> Mourasil </title>
 <!-- Favicon -->
-<link rel="icon" href="{{URL::asset('assets/img/brand/favicon.png')}}" type="image/x-icon"/>
+<link rel="shortcut icon" href="{{ url('assets/img/print/logo_lallatv.png') }}" type="image/x-icon">
 <!-- Icons css -->
 <link href="{{URL::asset('assets/css/icons.css')}}" rel="stylesheet">
 <!--  Custom Scroll bar-->

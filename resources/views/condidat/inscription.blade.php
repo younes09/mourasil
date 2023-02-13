@@ -7,7 +7,7 @@
 	<!-- Title -->
 	<title> Mourasil </title>
 	<!-- Favicon -->
-	<link rel="icon" href="{{URL::asset('assets/img/brand/favicon.png')}}" type="image/x-icon"/>
+	<link rel="icon" href="{{URL::asset('assets/img/print/logo_lallatv.png')}}" type="image/x-icon"/>
 	<!-- Icons css -->
 	<link href="{{URL::asset('assets/css/icons.css')}}" rel="stylesheet">
 	<!--  Custom Scroll bar-->
@@ -28,6 +28,11 @@
 <body style="direction: rtl;background-color: #dcdcdc87;">
 	
 	<div class="container my-5">
+		<div class="row">
+			<div class="col-12 text-center">
+				<a href="http://lallatv.com" target="_blank" rel="noopener noreferrer"><img src="{{ url('assets/img/print/logo_lallatv.png') }}" alt="" srcset=""></a>
+			</div>
+		</div>
 		@if (session('message'))
 		<div class="row justify-content-center" id="success-alert">
 			<div class="col-xl-6 col-md-12">
@@ -74,6 +79,18 @@
 								</div>
 								<div class="col-sm-12 col-md-6">
 									<input name="lastname" type="text" class="form-control mb-1" placeholder="اللقب" value="{{ old('lastname') }}" required/>
+								</div>								
+							</div>
+							<div class="row">
+								<div class="col-sm-12 col-md-6">
+									<div class="form-group">
+									  <label for="sex"><h4>الجنس</h4></label>
+									  <select class="form-select" aria-label="Default select example" name="sex" id="sex" required>
+										<option value="h">ذكر</option>
+										<option value="f">أنثى</option>
+									  </select>
+									</div>
+									{{-- <input name="lastname" type="text" class="form-control mb-1" placeholder="اللقب" value="{{ old('lastname') }}" required/> --}}
 								</div>
 							</div>
 						</div>
@@ -216,7 +233,7 @@
 						<div class="checkbox">
 							<div class="custom-checkbox custom-control">
 								<input type="checkbox" data-checkboxes="mygroup" name="checkbox" class="custom-control-input" id="checkbox-1" required>
-								<label for="checkbox-1" class="custom-control-label mt-1"><a href="#">قرأت الشروط و أوافق عليها</a></label>
+								<label for="checkbox-1" class="custom-control-label mt-1"><a href="{{ url('assets/img/print/صحفي متربص.png') }}" target="_blanck">قرأت الشروط و أوافق عليها</a></label>
 							</div>
 						</div>
 					</div>
