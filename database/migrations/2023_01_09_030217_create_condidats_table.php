@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('condidats', function (Blueprint $table) {
             $table->id();
+            $table->string('uuid',16)->unique();
             $table->string('photo',100)->nullable();
             $table->string('name',50);
             $table->string('lastname',50);
@@ -24,11 +25,12 @@ return new class extends Migration
             $table->date('birth_day');
             $table->string('birth_place',50);
             $table->string('address');
-            $table->string('numeroID',50);
+            $table->string('numeroID',50)->unique();
             $table->string('photoID')->nullable();
             $table->string('grade',50);
             $table->string('spiciality',50);
             $table->string('diplom')->nullable();
+            $table->string('state')->nullable()->default('s');// Stendby - Actif - Ended - Banned
             $table->timestamps();
         });
     }

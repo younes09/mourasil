@@ -53,8 +53,29 @@
 				<form action="{{ route('condidats.update',$condidat->id) }}" method="POST" enctype="multipart/form-data">
 					@csrf
 					@method('PUT')
-					<div class="row">
-						<div class="col-lg-6 col-md-12">
+					<div class="row justify-content-center">
+						<div class="col-lg-7 col-md-12">
+							<div class="card">
+								<div class="card-body">
+									<div>
+										<h4 class="mb-1">حالة المترشح</h4><br>
+									</div>
+									<div class="row mb-4">
+										<div class="col-6">
+											<div class="form-group">
+												<select class="form-control" name="state" id="">
+													<option value="s" @if($condidat->state == 's') selected @endif>في الإنتظار</option>
+													<option value="a" @if($condidat->state == 'a') selected @endif>نشط</option>
+													<option value="e" @if($condidat->state == 'e') selected @endif>منتهي</option>
+													<option value="b" @if($condidat->state == 'b') selected @endif>محضور</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-7 col-md-12">
 							<div class="card">
 								<div class="card-body">
 									<div>
@@ -68,7 +89,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-6 col-md-12">
+						<div class="col-lg-7 col-md-12">
 							<div class="card">
 								<div class="card-body">
 									<div>
@@ -118,7 +139,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-6 col-md-12">
+						<div class="col-lg-7 col-md-12">
 							<div class="card">
 								<div class="card-body">
 									<div>
@@ -135,7 +156,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-6 col-md-12">
+						<div class="col-lg-7 col-md-12">
 							<div class="card">
 								<div class="card-body">
 									<div>
@@ -149,7 +170,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-6 col-md-12">
+						<div class="col-lg-7 col-md-12">
 							<div class="card">
 								<div class="card-body">
 									<div>
@@ -171,7 +192,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-6 col-md-12">
+						<div class="col-lg-7 col-md-12">
 							<div class="card">
 								<div class="card-body">
 									<div>

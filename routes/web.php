@@ -6,7 +6,7 @@ use App\Http\Controllers\CondidatController;
 use App\Http\Controllers\InscriptionController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\MailController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,10 +21,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('condidat.inscription');
 });
-//TODO: ADD AUTHONTIFICATION FOR THIS ROUTE AND REMOVE REGISTRATION
+
 Route::resource('/condidats',CondidatController::class);
 
 Route::resource('/inscription', InscriptionController::class);
+
+Route::get('send-mail/{uuid}', [MailController::class, 'index']);
 
 // Route::get('/{page}', [AdminController::class,'index']);
 

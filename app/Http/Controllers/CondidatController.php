@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Condidat;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+
 
 class CondidatController extends Controller
 {
@@ -98,6 +100,7 @@ class CondidatController extends Controller
             }
         }
 
+        $input['uuid'] = Str::random(16);
         Condidat::create($input);
 
         return back()->with('message','تم التسجيل بنجاح');

@@ -12,6 +12,7 @@ class Condidat extends Model
 
     protected $fillable = [
         'id',
+        'uuid',
         'photo', 
         'name', 
         'lastname',
@@ -26,11 +27,13 @@ class Condidat extends Model
         'spiciality',
         'diplom',
         'sex',
+        'state',
     ];
 
     public function toSearchableArray(){
         return [
             'id' => $this->id,
+            'uuid' => $this->uuid,
             'name' => $this->name,
             'lastname' => $this->lastname,
             'email' => $this->email,

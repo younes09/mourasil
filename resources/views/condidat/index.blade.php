@@ -1,5 +1,14 @@
 @extends('layouts.master')
 @section('css')
+<style>
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+</style>
 @endsection
 @section('page-header')
 				<!-- breadcrumb -->
@@ -69,12 +78,14 @@
                                         </div>
                                     </div>
                                 </form>
-                            </div>
+                            </div>                            
                             <div class="card-body">
                                 <div class="table-responsive border-top userlist-table">
                                     <table class="table card-table table-striped table-vcenter text-nowrap mb-0">
                                         <thead>
                                             <tr>
+                                                <th class="wd-lg-10p"><span><h5>#</h5></span></th>
+                                                <th class="wd-lg-10p"><span><h5>الحالة</h5></span></th>
                                                 <th class="wd-lg-10p"><span><h5>المرشح</h5></span></th>
                                                 <th class="wd-lg-20p"><span><h5> </h5></span></th>
                                                 <th class="wd-lg-20p"><span><h5> الدبلوم و بطاقة التعريف </h5></span></th>
@@ -88,6 +99,13 @@
                                         <tbody>
                                             @forelse ($condidats as $condidat)
                                             <tr>
+                                                <td>{{ $condidat->uuid }}</td>
+                                                <td>
+                                                    @if ($condidat->state == 's') <span class="dot bg-warning" data-placement="top" data-toggle="tooltip" title="في الإنتظار"></span> @endif
+                                                    @if ($condidat->state == 'a') <span class="dot bg-success" data-placement="top" data-toggle="tooltip" title="مفعل"></span> @endif
+                                                    @if ($condidat->state == 'e') <span class="dot bg-secondary" data-placement="top" data-toggle="tooltip" title="مكتمل"></span> @endif
+                                                    @if ($condidat->state == 'b') <span class="dot bg-danger" data-placement="top" data-toggle="tooltip" title="محظور"></span> @endif
+                                                </td>
                                                 <td>
                                                     <img alt="avatar" class="rounded-circle avatar-md mr-2" src=" {{ url('images/'.$condidat->photo) }}">
                                                 </td>

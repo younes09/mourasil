@@ -25,8 +25,8 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
 	<link href="{{URL::asset('assets/plugins/fileuploads/css/fileupload.css')}}" rel="stylesheet" type="text/css"/>
 </head>
-<body style="direction: rtl;background-color: #dcdcdc87;">
-	
+<body style="direction: rtl;background-color: #dcdcdc87;">	
+	<img style="width: 100%;" src="{{ url('assets/img/print/header.png') }}" alt="" srcset="">
 	<div class="container my-5">
 		<div class="row">
 			<div class="col-12 text-center">
@@ -36,8 +36,11 @@
 		@if (session('message'))
 		<div class="row justify-content-center" id="success-alert">
 			<div class="col-xl-6 col-md-12">
-				<div class="alert alert-success" role="alert">
-					<h5><strong>{{ session('message') }}.</strong></h5>                        
+				<div class="alert alert-warning d-flex align-items-center text-danger" role="alert">
+					<svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+					<div>
+						<h5><strong>{{ session('message') }}.</strong></h5> 
+					</div>					
 				</div>
 			</div>
 		</div>
@@ -239,11 +242,12 @@
 					</div>
 				</div>
 				<div class="col-lg-12 col-md-12 text-center mb-5">
-					<button class="btn btn-primary"><span><h5>إرسال المعلومات <i class="typcn typcn-arrow-left-thick"></i></h5></span></button>
+					<button class="btn btn-primary" onclick="return confirm('هل أنت متأكد من أن المعلومات المقدمة صحيحة؟');"><span><h5>إرسال المعلومات <i class="typcn typcn-arrow-left-thick"></i></h5></span></button>
 				</div>
 			</div>
 		</form>
 	</div>
+	<img style="width: 100%;" src="{{ url('assets/img/print/footer.png') }}" alt="" srcset="">
 
 	<!-- Back-to-top -->
 	<a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>

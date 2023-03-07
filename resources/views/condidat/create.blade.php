@@ -52,8 +52,29 @@
 				<!-- row -->
 				<form action="{{ url('/condidats') }}" method="post" enctype="multipart/form-data">
 					@csrf
-					<div class="row">
-						<div class="col-lg-6 col-md-12">
+					<div class="row justify-content-center">
+						<div class="col-lg-7 col-md-12">
+							<div class="card">
+								<div class="card-body">
+									<div>
+										<h4 class="mb-1">حالة المترشح</h4><br>
+									</div>
+									<div class="row mb-4">
+										<div class="col-6">
+											<div class="form-group">
+												<select class="form-control" name="state" id="">
+													<option value="s">في الإنتظار</option>
+													<option value="a">نشط</option>
+													<option value="e">منتهي</option>
+													<option value="b">محضور</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-7 col-md-12">
 							<div class="card">
 								<div class="card-body">
 									<div>
@@ -67,7 +88,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-6 col-md-12">
+						<div class="col-lg-7 col-md-12">
 							<div class="card">
 								<div class="card-body">
 									<div>
@@ -117,7 +138,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-6 col-md-12">
+						<div class="col-lg-7 col-md-12">
 							<div class="card">
 								<div class="card-body">
 									<div>
@@ -134,7 +155,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-6 col-md-12">
+						<div class="col-lg-7 col-md-12">
 							<div class="card">
 								<div class="card-body">
 									<div>
@@ -148,7 +169,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-6 col-md-12">
+						<div class="col-lg-7 col-md-12">
 							<div class="card">
 								<div class="card-body">
 									<div>
@@ -170,7 +191,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-6 col-md-12">
+						<div class="col-lg-7 col-md-12">
 							<div class="card">
 								<div class="card-body">
 									<div>

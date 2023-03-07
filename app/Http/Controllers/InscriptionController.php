@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Condidat;
+use Illuminate\Support\Str;
 
 
 class InscriptionController extends Controller
@@ -91,9 +92,11 @@ class InscriptionController extends Controller
             }
         }
 
+        $input['uuid'] = Str::random(16);
         Condidat::create($input);
 
-        return back()->with('message','تم التسجيل بنجاح');
+        return redirect('send-mail/'.$input['uuid']);
+        // return back()->with('message','تم التسجيل بنجاح');
     }
 
     /**
